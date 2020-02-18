@@ -9,17 +9,20 @@ class Task:
         self.B = B
 
     def __str__(self):
-        Matr = list()
+        Matr
         for i in range(len(self.A)):
             for j in range(len(self.A[i])):
-                Matr.append(str(self.A[j]) + ' ');
+                Matr[i].append(str(self.A[j]) + ' ');
 
-            Matr.append('=' + str(self.B[i]) + '\n')
+            Matr[i].append('= ' + str(self.B[i]) + '\n')
 
         for i in range(len(self.C)):
-            Matr.append(str(self.C) + 'X' + str(i + 1))
+            Matr[len(self.A)].append(str(self.C) + 'X' + str(i + 1))
 
-        Matr.append('-> min')
+        Matr.append('-> min\n')
+
+        for i in range(len(self.C)):
+            Matr[len(self.A + 1].append('X' + str(i + 1) + '> 0 ')
 
         return Matr
 
