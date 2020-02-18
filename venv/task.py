@@ -22,7 +22,7 @@ class Task:
         Matr.append('-> min\n')
 
         for i in range(len(self.C)):
-            Matr[len(self.A + 1].append('X' + str(i + 1) + '> 0 ')
+            Matr[len(self.A + 1)].append('X' + str(i + 1) + '> 0 ')
 
         return Matr
 
