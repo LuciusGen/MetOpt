@@ -12,6 +12,7 @@ class Task:
         for i in range(len(self.A)):
             for j in range(len(self.A[i]) - 1):
                 print(str(self.A[i][j]) + '*X' + str(j) + ' + ', end="")
+
             print(str(self.A[i][j + 1]) + '*X' + str(j + 1) + ' = ' + str(self.B[i]))
 
         for i in range(len(self.C) - 1):
