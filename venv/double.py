@@ -3,7 +3,6 @@
 from task import Task
 from accessify import private
 import numpy as np
-#забыл про ограничение на знак для yi
 
 class Double(Task):
     @private
