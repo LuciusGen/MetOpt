@@ -1,7 +1,7 @@
 from task import Task
 import numpy as np
 from  double import Double
-
+from pointsMethod import methodMain
 #1, проверяем работу построеня двойственной задачи из канонической
 #A = np.array([[-1, 3, -5], [2, -1, 4], [3, 1, 1]])
 #B = np.array([12, 24, 18])
@@ -20,4 +20,5 @@ from  double import Double
 #Answer:[1, 3, 4, 0, 0]
 #AnswerDouble:[0, 0, 0, 13, 24]
 #a = Task(A, B, C)
-#ad = Double(a)
+#ad = Double(A, B, C)
+#Sol = methodMain(a)
