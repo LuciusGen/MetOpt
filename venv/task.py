@@ -7,6 +7,11 @@ class Task:
         self.C = C
         self.A = A
         self.B = B
+        
+        for i in range(len(B)):
+            if self.B[i] < 0:
+                self.A[i] = -1 * self.A[i]
+                self.B[i] = -1 * self.B[i]
 
     def print(self):
         for i in range(len(self.A)):
