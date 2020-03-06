@@ -2,13 +2,14 @@ from task import Task
 import numpy as np
 from  double import Double
 from pointsMethod import methodMain
+from simplex import *
 #1, проверяем работу построеня двойственной задачи из канонической
 #A = np.array([[-1, 3, -5], [2, -1, 4], [3, 1, 1]])
 #B = np.array([12, 24, 18])
 #C = np.array([2, 1, 3])
 #
 #Answer not exist
-#a = Task(A, B, C)
+a = Task(A, B, C)
 #a.print()
 #ad = Double(a)
 #ad.print()
@@ -20,5 +21,8 @@ from pointsMethod import methodMain
 #Answer:[1, 3, 4, 0, 0]
 #AnswerDouble:[0, 0, 0, 13, 24]
 #a = Task(A, B, C)
-#ad = Double(A, B, C)
+#ad = Double(a)
 #Sol = methodMain(a)
+
+resX, resN, _ = basisSolve(a)
+print(resX, resN)
