@@ -44,7 +44,7 @@ class Double(Task):
                 self.B[i] = -1 * self.B[i]
 
     def __init__(self, Task):
-        self.A = np.transpose(Task.A)
-        self.C = -Task.B
-        self.B = Task.C
+        self.A = np.copy(np.transpose(Task.A))
+        self.C = np.copy(-Task.B)
+        self.B = np.copy(Task.C)
         self.toCanoinan()

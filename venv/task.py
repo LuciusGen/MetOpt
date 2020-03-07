@@ -27,8 +27,7 @@ class Task:
         for i in range(len(self.C)):
             print('X' + str(i) + ' >= 0', end=" ")
 
-    def getReverseA(self):
-        return np.linalg.inv(A)
 
-    def getRand(self):
-        return np.linalg.matrix_rank(A)
+    def otherRes(self, xRes):
+        """Восстановление решения задачи по решеню двойственной"""
+        
