@@ -26,8 +26,3 @@ class Task:
 
         for i in range(len(self.C)):
             print('X' + str(i) + ' >= 0', end=" ")
-
-
-    def otherRes(self, xRes):
-        """Восстановление решения задачи по решеню двойственной"""
-        

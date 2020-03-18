@@ -3,6 +3,7 @@ import numpy as np
 from itertools import combinations
 from accessify import private
 
+Eps = 0.00001
 
 def findAll(Zd: Task):
     NList = combinations(list(range(len(Zd.A[0]))), len(Zd.A))
@@ -10,8 +11,11 @@ def findAll(Zd: Task):
     for N in NList:
         Ak = np.array([Zd.A[:, i] for i in N]).T
 
-        if np.linalg.det(Ak) != 0:
+        if np.abs(np.linalg.det(Ak)) > Eps:
             xNk = np.matmul(np.linalg.inv(Ak), Zd.B)
+            if np.min(xNk) < 0:
+                continue
+
             xN = np.zeros(len(Zd.A[0]))
 
             for i in range(len(N)):
