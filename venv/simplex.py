@@ -3,7 +3,6 @@ import numpy as np
 from itertools import combinations
 
 
-
 def splitXkN(xkN):
     """Для получения N+, N0, X+, X0"""
     NkPlus = np.array(list(filter(lambda i: xkN[i] > 0, range(len(xkN)))))
@@ -30,13 +29,13 @@ def basisSolve(a: Task):
     
     yM = xk[len(A[0]):]
     if not end or np.max(yM) > 0:
-        return np.array([np.inf for _ in range(len(A))]), np.array([]), False
+        return np.array([np.inf for _ in range(len(A))]), np.array([]), np.array([]), False
     
     x0N = xk[:len(A[0])]
     _, NkPlus,_,_ = splitXkN(x0N)
     
     if len(NkPlus) == len(B):
-        return x0N, NkPlus, True
+        return x0N, Nk, NkPlus, True
     print("Need another vect")
     
 

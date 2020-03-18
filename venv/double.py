@@ -48,3 +48,22 @@ class Double(Task):
         self.C = np.copy(-Task.B)
         self.B = np.copy(Task.C)
         self.toCanoinan()
+
+    def reconstSol(self, task, Nk):
+        #print(Nk)
+        c = np.array(task.C)
+        c_Nk = []
+        A_tmp = []
+
+        for nk_i in range(len(Nk)):
+            A_tmp.append([])
+            c_Nk.append(c[Nk[nk_i]])
+            for i in range(len(task.A)):
+                A_tmp[nk_i].append(task.A[i][Nk[nk_i]])
+        #print(A_tmp)
+
+        A_tmp = np.transpose(np.array(A_tmp))
+        A_inv = np.linalg.inv(A_tmp)
+        c_Nk = np.array(c_Nk)
+        y = c_Nk.dot(A_inv)
+        return y

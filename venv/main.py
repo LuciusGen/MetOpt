@@ -19,6 +19,10 @@ Sol = methodMain(a)
 Output.write(Sol, "Answer with points meth")
 
 #а теперь искусственным базисом решим
-resX, resN, _ = basisSolve(a)
+resX, Nk, resN, _ = basisSolve(a)
 Output.write(resX, "Simplex ans")
 Output.write(resN, "N for simplex ans")
+
+#восстановление решения
+y = ad.reconstSol(a, Nk)
+print(y)
