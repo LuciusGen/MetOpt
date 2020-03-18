@@ -1,0 +1,22 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Постановка задачи}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Постановка задачи ЛП}{3}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Условие применимости}{3}{section.2}%
+\contentsline {section}{\numberline {3}Описание алгоритма}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Метод искуственного базиса}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Симплекс-метод}{4}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Метод крайних точек}{4}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Восстановление решения по решению двойственной задачи}{4}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Результаты}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Результат решения симплекс методом с начальным приближением методом искуственного базиса}{4}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Начальный базис вектор полученный методом искуственного базиса}{4}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Интерпретация решения}{4}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Ответ в поставленной задаче}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Результат методом крайних точек}{4}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Двойственная задача}{5}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Двойственная задача}{5}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Ответ в двойственной задаче}{5}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Результат методом крайних точек для двойственной задачи}{5}{subsubsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.6}Восстановление решения}{5}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Обоснование оптимальности решений}{5}{section.5}%
+\contentsline {section}{\numberline {6}Приложения}{5}{section.6}%
