@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.3.7)  18 MAR 2020 16:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.3.7)  19 MAR 2020 13:01
 entering extended mode
 **./document.tex
 (document.tex
@@ -1190,81 +1190,92 @@ Underfull \hbox (badness 10000) in paragraph at lines 193--198
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 239--240
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--242
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
 
  []
 
 [4]
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
 
-LaTeX Warning: Command \CYRS invalid in math mode on input line 264.
+ []
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 271.
 
 Missing character: There is no С in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--269
+Underfull \hbox (badness 10000) in paragraph at lines 275--276
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--271
+Underfull \hbox (badness 10000) in paragraph at lines 277--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--275
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
+
+LaTeX Warning: Command \CYRV invalid in math mode on input line 289.
+
+Missing character: There is no В in font cmr10!
+
+Overfull \hbox (9.1746pt too wide) in paragraph at lines 285--291
+\T2A/cmr/m/n/10 Если воз-мож-ность ре-ше-ния под-твер-жде-на, на-чи-на-ет-ся вт
+о-рой этап ре-а-ли-за-ции симплекс-
+ []
+
 [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 294.
+ [6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 294.
  (document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 294.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 294.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 9AC43F15473A9228C4E2386F2B2BB3E0;6050.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
+(rerunfilecheck)             Checksum: 06D764DC679243188F01A24920F92416;5816.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 294.
  ) 
 Here is how much of TeX's memory you used:
- 17209 strings out of 492484
- 227084 string characters out of 3135133
- 334176 words of memory out of 3000000
- 21201 multiletter control sequences out of 15000+200000
+ 17208 strings out of 492484
+ 227060 string characters out of 3135133
+ 335176 words of memory out of 3000000
+ 21200 multiletter control sequences out of 15000+200000
  33045 words of font info for 103 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,45p,3239b,361s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,11n,45p,3239b,353s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\РїРє\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\t
 crm1000.pk>{C:/dowloads/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{C:/dowlo
 ads/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{C:/dowloads/MiKTeX/fonts/enc
-/dvips/mnsymbol/MnSymbolE.enc} <C:\Users\РїРє\AppData\Local\MiKTeX\2.9\fonts/pk
-/ljfour/lh/lh-t2a/dpi600\labx1200.pk> <C:\Users\РїРє\AppData\Local\MiKTeX\2.9\f
-onts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\РїРє\AppData\Local\MiKTe
-X\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1000.pk> <C:\Users\РїРє\AppData\Loca
-l\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0800.pk> <C:\Users\РїРє\AppDa
-ta\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1728.pk> <C:\Users\РїР
-є\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.pk> <C:\Us
-ers\РїРє\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\lacc1000.pk>
- <C:\Users\РїРє\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\laxc1
-000.pk> <C:\Users\РїРє\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi60
-0\lacc1200.pk> <C:\Users\РїРє\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2
-a/dpi600\lacc1440.pk><C:/dowloads/MiKTeX/fonts/type1/public/mnsymbol/MnSymbol10
-.pfb><C:/dowloads/MiKTeX/fonts/type1/public/mnsymbol/MnSymbol7.pfb><C:/dowloads
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/dowloads/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmmi7.pfb><C:/dowloads/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmr10.pfb><C:/dowloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/
-dowloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-Output written on document.pdf (5 pages, 230303 bytes).
+/dvips/mnsymbol/MnSymbolF.enc}{C:/dowloads/MiKTeX/fonts/enc/dvips/mnsymbol/MnSy
+mbolE.enc} <C:\Users\РїРє\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dp
+i600\labx1200.pk> <C:\Users\РїРє\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh
+-t2a/dpi600\labx1440.pk> <C:\Users\РїРє\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
+r/lh/lh-t2a/dpi600\labx1000.pk> <C:\Users\РїРє\AppData\Local\MiKTeX\2.9\fonts/p
+k/ljfour/lh/lh-t2a/dpi600\larm0800.pk> <C:\Users\РїРє\AppData\Local\MiKTeX\2.9\
+fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1728.pk> <C:\Users\РїРє\AppData\Local\MiKT
+eX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.pk> <C:\Users\РїРє\AppData\Loc
+al\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\lacc1000.pk> <C:\Users\РїРє\AppD
+ata\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\laxc1000.pk> <C:\Users\Рї
+Рє\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\lacc1200.pk> <C:\U
+sers\РїРє\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\lacc1440.pk
+><C:/dowloads/MiKTeX/fonts/type1/public/mnsymbol/MnSymbol10.pfb><C:/dowloads/Mi
+KTeX/fonts/type1/public/mnsymbol/MnSymbol7.pfb><C:/dowloads/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmmi10.pfb><C:/dowloads/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmmi7.pfb><C:/dowloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/do
+wloads/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/dowloads/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on document.pdf (6 pages, 240091 bytes).
 PDF statistics:
- 549 PDF objects out of 1000 (max. 8388607)
+ 560 PDF objects out of 1000 (max. 8388607)
  27 named destinations out of 1000 (max. 500000)
- 169 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
