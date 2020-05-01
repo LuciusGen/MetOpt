@@ -1,0 +1,6 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Описание метода}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Градиентный метод 1-го порядка наискорейшего спуска}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Метод Ньютона}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Результаты}{4}{section.2}%
+\contentsline {section}{\numberline {3}Оценка достоверности результатов}{4}{section.3}%

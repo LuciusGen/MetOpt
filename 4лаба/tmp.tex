@@ -1,0 +1,211 @@
+\documentclass[a4]{article}
+\pagestyle{myheadings}
+
+%%%%%%%%%%%%%%%%%%%
+% Packages/Macros %
+%%%%%%%%%%%%%%%%%%%
+\usepackage{mathrsfs}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{} 
+\rfoot{\normalsize\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\newcommand{\RomanNumeralCaps}[1]
+{\MakeUppercase{\romannumeral #1}}
+
+\usepackage{amssymb,latexsym}  % Standard packages
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{MnSymbol}
+\usepackage{amsmath,amsthm}
+\usepackage{indentfirst}
+\usepackage{graphicx}%,vmargin}
+\usepackage{graphicx}
+\graphicspath{{pictures/}} 
+\usepackage{verbatim}
+\usepackage{color}
+
+
+
+
+
+
+
+
+
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}% -- настройка картинок
+
+\usepackage{epigraph} %%% to make inspirational quotes.
+\usepackage[all]{xy} %for XyPic'a
+\usepackage{color} 
+\usepackage{amscd} %для коммутативных диграмм
+
+
+\newtheorem{Lemma}{Лемма}[section]
+\newtheorem{Proposition}{Предложение}[section]
+\newtheorem{Theorem}{Теорема}[section]
+\newtheorem{Corollary}{Следствие}[section]
+\newtheorem{Remark}{Замечание}[section]
+\newtheorem{Definition}{Определение}[section]
+\newtheorem{Designations}{Обозначение}[section]
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% 
+%Сношение с оглавлением% 
+%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage{tocloft} 
+\renewcommand{\cftdotsep}{2} %частота точек
+\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
+\renewcommand{\cfttoctitlefont}{\hspace{0.38\textwidth} \LARGE\bfseries} 
+\renewcommand{\cftsecaftersnum}{.}
+\renewcommand{\cftsubsecaftersnum}{.}
+\renewcommand{\cftbeforetoctitleskip}{-1em} 
+\renewcommand{\cftaftertoctitle}{\mbox{}\hfill \\ \mbox{}\hfill{\footnotesize Стр.}\vspace{-0.5em}} 
+\renewcommand{\cftsubsecfont}{\hspace{1pt}} 
+\renewcommand{\cftparskip}{3mm} %определяет величину отступа в оглавлении
+\setcounter{tocdepth}{5} 
+
+
+
+
+\addtolength{\textwidth}{0.7in}
+\textheight=630pt
+\addtolength{\evensidemargin}{-0.4in}
+\addtolength{\oddsidemargin}{-0.4in}
+\addtolength{\topmargin}{-0.4in}
+
+\newcommand{\empline}{\mbox{}\newline} 
+\newcommand{\likechapterheading}[1]{ 
+	\begin{center} 
+		\textbf{\MakeUppercase{#1}} 
+	\end{center} 
+	\empline} 
+
+\makeatletter 
+\renewcommand{\@dotsep}{2} 
+\newcommand{\l@likechapter}[2]{{\bfseries\@dottedtocline{0}{0pt}{0pt}{#1}{#2}}} 
+\makeatother 
+\newcommand{\likechapter}[1]{ 
+	\likechapterheading{#1} 
+	\addcontentsline{toc}{likechapter}{\MakeUppercase{#1}}} 
+
+
+
+
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+\definecolor{linkcolor}{HTML}{000000} % цвет ссылок
+\definecolor{urlcolor}{HTML}{AA1622} % цвет гиперссылок
+
+\hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
+
+
+
+\def \newstr {\medskip \par \noindent} 
+
+
+
+\begin{document}
+	\section{Описание метода}
+		\subsection{Градиентный метод 1-го порядка наискорейшего спуска}
+			Input: Eps > 0 - необходимая точность вычисления, f(x), nullPoint - начальное приближение.\\
+			
+			Output: $x_min$ - значение аргумента,такое, что $||\nabla f(x_k)||^2 < Eps^2$.\\
+			
+			Алгоритм по шагам:\\
+			1) $x_0$ = nullPoint, k = 0;\\
+			2)while($||\nabla f(x_k)||^2 > Eps^2$)\{\\
+			
+				3)вычислим $\alpha_k$: f(x) = f($x_k - \alpha_k \nabla f(x_k)$) -> min. Для этого будем использовать метод золотого сечения.\\
+				
+				4)$x_{k + 1} = x_k - \alpha_k \nabla f(x_k)$, k = k + 1.\\
+				\}\\
+			
+			Таким образом на момент завершения цикла мы получим $x_k$ = $x_min$.\\
+			
+			Замечания:\\
+			1)Обоснование выбора условия окончания вычисления для метода одномерной минимизации\\
+				Для нахождения $\aleph_k$ решаем задачу одномерной минимизации, с помощью метода золотого сечения, необходимо уменьшить интервал неопределенности так, чтобы добиться выполнения условия ||$\nabla f(x_k)$|| <= Eps.
+				Воспользуемся условием Липшица, задав точность для поиска параметра равную $\frac{Eps}{L}$. Таким образом, движение идёт п онаправлению к $\nabla f = 0$, что позволит достичь условие окончания цикла.\\
+			2)Использование квадрата нормы в условии выхода из цикла:\\
+			Выбор усовия оправдан тем, что вычисление квадратного корня на каждой итерации значительно повышает время работы приложения. Возводя в квадрат обе части условие остаётся аналогичным.
+			
+			\subsection{Метод Ньютона}
+				В данном методе улучшено представление приближения f(x), удерживая в е1 разложении квадратичные члены:
+				$$f_k(x) \approx f(x_k) + \nabla f(x_k) (x - x_k) + \frac{(x_k - x)^T H(x_k) (x_k - x)}{2}$$
+				
+				Рассмотрим вектор $d_k = x_{k+1} - x_k$. Определяется из :
+				
+				$$d_k = -(H(x_k))^{-1} \nabla f(x_k)$$
+				Тогда следующее приближение:
+				$$x_{k + 1} = x_k + \alpha_k d_k$$
+				Данный метод называют методом Ньютона, потому что $x_{k + 1} = x_k + \alpha_k d_k$ = это примененный к СЛАУ $grad(f(x_k))$ = 0 метод Ньютона, из-за этого получается регулярный шаг $\alpha$ = 1.\\
+				
+				Input: Eps > 0 - необходимая точность вычисления, f(x), nullPoint - начальное приближение.\\
+				
+				Output: $x_min$ - значение аргумента,такое, что $||\nabla f(x_k)||^2 < Eps^2$.\\
+				
+				Алгоритм:\\
+					1)$x_0$ = nullPoint, k = 0.\\
+					2)while($||\nabla f(x_k)||^2 > Eps^2$)\{\\
+						
+						3)Вычисляем $d_k$\\
+						
+						4)$x_{k + 1} = x_k + \alpha_k d_k$. Переходим к следующей итерации, k = k + 1.\\
+						\}\\
+			
+			Таким образом на момент завершения цикла мы получим $x_k$ = $x_min$.\\
+			
+			\section{Результаты}
+				Для обоих алгоритмов:\\
+				1)Начальное приближение = [0.00, 0.00]\\
+				2)Eps = 0.01\\
+				Метод наискорейшег оспуска сошёлся к точке [0.54; -0.72] за 649 шагов.\\
+				Метод Ньютона сошёлся к точке [0.17; -0.97] за 3 шага.\\
+				
+				Оба метода применимы к нашей задаче в некоторой окрестности и выдают решения с требуемой точностью.\\
+				Метод Ньютона требовал меньшего числа шагов, чем метод наискорейшего спуска. Но сравнивать скорость работы этих методов лишь по числу итераций было бы некорректно, так как в одном случае нам приходится решать СЛАУ, а в другом - задачу одномерной минимизации.
+			
+			\section{Оценка достоверности результатов}
+				Исходя из условий сходимости, алгоритм наискорейшего спуска и алгоритм Ньютона всегда сходятся к точке, где ||$\nabla f(x_k)$|| <= $\epsilon$.\\
+				
+				Проведём дополнительный эксперимент для метода наискорейшего спуска: несколько раз запустим алгоритм с разными начальными приближениями.\\
+				\newpage
+				\begin{table}[h!]
+					
+					\caption{Метод наискорейшего спуска}
+					\label{tab:my_label}
+					\begin{center}
+						\vspace{5mm}
+						\begin{tabular}{|c|c|c|c}
+							\hline
+							стартовая точка & $x1_{stop}$ & $x2_{stop}$ & число итераций \\
+							\hline
+							[0.0; 0.0] & 0.54 & -0.72 & 649\\
+							\hline
+							[2.0; 5.0] & 0.54 & -0.72 & 913\\
+							\hline
+							[-1.0; -1.0] & -0.23 & -1.23 & 542\\
+							\hline
+							[-5.0; 5.0] & -0.23 & -1.23 & 925\\
+							\hline
+							[-0.25; -1.25]& -0.23 & -1.23 & 76\\
+							\hline
+						\end{tabular}
+						
+					\end{center}
+					
+				\end{table}
+			
+			По итогам данного эксперимента можем видеть, что метод наискорешего спуска для различных начальнах приближений сходится к разным точкам оптимума, и всякий раз достигает точки минимума функции.
+\end{document}
