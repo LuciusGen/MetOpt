@@ -1,17 +1,13 @@
 from lab_3_golden_section import golden_section
 from numpy import linalg, dot, array
-from typing import Callable, NewType
 from math import cos, sin
 
-Point = NewType('Point', array)
-Vector = NewType('Vector', array)
 
-
-def func(x: Point):
+def func(x):
     return 4*pow(x[0], 2) + pow(x[1], 2) + cos(6 * x[0] + x[1]) - x[0] + 2 * x[1]
 
 
-def func_grad(x: Point):
+def func_grad(x):
     return [-6 * sin(6 * x[0] + x[1]) + 8 * x[0] - 1, -1 * sin(6 * x[0] + x[1]) + 2 * x[1] + 2]
 
 
@@ -27,7 +23,7 @@ def gradient_descent(function, gradient, nullPoint, Eps):
         x_k = x_k - dot(alpha_k, grad_x_k)
 
 
-def run_gradient_descent(f, grad, x0=Point([-1., 2.]), Eps=0.01, output_filename="out.txt"):
+def run_gradient_descent(f, grad, x0=[-1, 2], Eps=0.01, output_filename="out.txt"):
     steps = list(gradient_descent(f, grad, x0, Eps))
     with open(output_filename, "w+") as file_out:
         file_out.write(str(steps[len(steps) - 1][0]) + " " + str(steps[len(steps) - 1][1]) + "\n")
@@ -36,4 +32,4 @@ def run_gradient_descent(f, grad, x0=Point([-1., 2.]), Eps=0.01, output_filename
     return steps
 
 
-run_gradient_descent(func, func_grad, array([0, 0]))
+run_gradient_descent(func, func_grad, [0, 0])
